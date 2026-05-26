@@ -50,8 +50,8 @@ public class Bird extends Animal {
 
     }
 
-    public String toString(int id, String color, int maximumLifespan, String foodType, String family, String maximumFlightAltitude) {
-        String result = "Id: " + id +  "Цвет: " + color + ", Максимальная продолжительность жизни: " + maximumLifespan + ", Тип еды: " + foodType +
+    public String toString() {
+        String result = "Птица. Id: " + id +  ", Цвет: " + color + ", Максимальная продолжительность жизни: " + maximumLifespan + ", Тип еды: " + foodType +
                 ", Семейство: " + family + ", Максимальная высота полёта: " + maximumFlightAltitude;
         return result;
     }

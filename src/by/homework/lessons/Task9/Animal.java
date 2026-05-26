@@ -1,10 +1,10 @@
 package by.homework.lessons.Task9;
 
 public class Animal {
-    private int id;
-    private String color;
-    private int maximumLifespan;
-    private String foodType;
+    protected int id;
+    protected String color;
+    protected int maximumLifespan;
+    protected String foodType;
 
     public Animal(String color, int maximumLifespan, String foodType) {
         this.color = color;

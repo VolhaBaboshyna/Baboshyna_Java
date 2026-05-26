@@ -9,11 +9,11 @@ public class Dog extends Animal {
         super(color, maximumLifespan, foodType);
     }
 
-    public Dog(String color, int maximumLifespan, String foodType,String name, String breed, double averageWeight) {
+    public Dog(String color, int maximumLifespan, String foodType, String name, String breed, double averageWeight) {
         super(color, maximumLifespan, foodType);
-        this.name=name;
-        this.breed=breed;
-        this.averageWeight=averageWeight;
+        this.name = name;
+        this.breed = breed;
+        this.averageWeight = averageWeight;
     }
 
     public Dog() {
@@ -51,10 +51,10 @@ public class Dog extends Animal {
 
     }
 
-    public void toString(String color, int maximumLifespan, String foodType, String name, String breed, double averageWeight) {
-        String result = "Цвет: " + color + ", Максимальная продолжительность жизни: " + maximumLifespan + " лет, Тип еды: " + foodType +
+    public String toString() {
+        String result = "Собака. Id: " + id + " Цвет: " + color + ", Максимальная продолжительность жизни: " + maximumLifespan + " лет, Тип еды: " + foodType +
                 ", Имя: " + name + ", Порода: " + breed + ", Средний вес: " + averageWeight + " кг";
-        System.out.println(result);
+        return result;
     }
 
 

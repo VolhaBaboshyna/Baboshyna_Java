@@ -20,7 +20,11 @@ public class Zoo {
     public void getPrintAnimals() {
         System.out.println("Животные в зоопарке:");
         for (Animal animal : animals) {
-            System.out.println(animal);
+            if (animal == null) {
+                continue;
+            } else {
+                System.out.println(animal.toString());
+            }
         }
     }
 
@@ -33,12 +37,21 @@ public class Zoo {
         return animals;
     }
 
-    public Animal[] setId () {
-        super(id);
+    public void setId() {
         for (int i = 0; i < animals.length; i++) {
-            animals[i].id=i+1;
+            animals[i].id = i + 1;
         }
-        return animals;
     }
 
+    public void deleteAnimal(int id) {
+        Animal[] newAnimals = new Animal[animals.length - 1];
+        for (int i = 0, j = 0; i < animals.length; i++) {
+            if (id == i + 1) {
+            } else {
+                newAnimals[j] = animals[i];
+                j++;
+            }
+        }
+        animals = newAnimals;
+    }
 }

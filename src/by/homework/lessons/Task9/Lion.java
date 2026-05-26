@@ -20,9 +20,10 @@ public class Lion extends Animal {
         System.out.println(result);
     }
 
-    @Override
     public String toString() {
-        String result = "Лев: " + name + ", Возраст: " + age + " лет";
+        String result = "Лев. Id: " + id + ", Цвет: " + color + ", Максимальная продолжительность жизни: " + maximumLifespan +
+                ", Тип еды: " + foodType + "Лев: " + name + ", Возраст: " + age + " лет";
+//        String result =  "Лев: " + name + ", Возраст: " + age + " лет";
         return result;
     }
 

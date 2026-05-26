@@ -61,6 +61,7 @@ public class Main {
         zoo1.addAnimals(julion);
         zoo1.addAnimals(simba);
 
+
         System.out.println(king.toString());
         System.out.println(julion.toString());
 
@@ -73,6 +74,10 @@ public class Main {
         }
 
         zoo1.setId();
+
+//        zoo1.getPrintAnimals();
+
+        zoo1.deleteAnimal(3);
 
         zoo1.getPrintAnimals();
     }
