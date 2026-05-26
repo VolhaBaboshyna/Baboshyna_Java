@@ -1,11 +1,19 @@
 package by.homework.lessons.Task9;
 
 public class Animal {
+    private int id;
     private String color;
     private int maximumLifespan;
     private String foodType;
 
     public Animal(String color, int maximumLifespan, String foodType) {
+        this.color = color;
+        this.maximumLifespan = maximumLifespan;
+        this.foodType = foodType;
+    }
+
+    public Animal(int id, String color, int maximumLifespan, String foodType) {
+        this.id = id;
         this.color = color;
         this.maximumLifespan = maximumLifespan;
         this.foodType = foodType;
@@ -32,8 +40,13 @@ public class Animal {
     public void Play() {
     }
 
+//    public String toString() {
+//        String result = "Цвет: " + color + ", Максимальная продолжительность жизни: " + maximumLifespan + "лет, Тип еды: " + foodType;
+//        return result;
+//    }
+
     public String toString() {
-        String result = "Цвет: " + color + ", Максимальная продолжительность жизни: " + maximumLifespan + "лет, Тип еды: " + foodType;
+        String result = "Id: " + id + ", Цвет: " + color + ", Максимальная продолжительность жизни: " + maximumLifespan + "лет, Тип еды: " + foodType;
         return result;
     }
 

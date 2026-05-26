@@ -24,7 +24,20 @@ public class Zoo {
         }
     }
 
+    public void getPrintAnimals(Animal animal) {
+        System.out.println(animal);
+
+    }
+
     public Animal[] getAnimals() {
+        return animals;
+    }
+
+    public Animal[] setId () {
+        super(id);
+        for (int i = 0; i < animals.length; i++) {
+            animals[i].id=i+1;
+        }
         return animals;
     }
 

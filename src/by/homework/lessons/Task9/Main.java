@@ -24,9 +24,6 @@ public class Main {
         System.out.println(bird2.toString());
 
         Zoo zoo1 = new Zoo();
-        Animal wolf = new Animal("Серый", 45, "Мясо");
-        Animal bear = new Animal("Бурый", 30, "Рыба и мясо");
-        Animal zebra = new Animal("Черно-белый", 25, "Трава");
         Bird eagle = new Bird("коричневый", 20, "Мясо", "Ястребиные", "8000 м");
 
         Bird sparrow = new Bird("Серый", 3, "Зерно", "Воробьиные", "50 м");
@@ -40,9 +37,6 @@ public class Main {
 
         Dog max = new Dog("Чёрный", 10, "Корм премиум-класса", "Макс",
                 "Немецкая овчарка", 40.0);
-        zoo1.addAnimals(wolf);
-        zoo1.addAnimals(bear);
-        zoo1.addAnimals(zebra);
         zoo1.addAnimals(eagle);
         zoo1.addAnimals(sparrow);
         zoo1.addAnimals(penguin);
@@ -52,6 +46,24 @@ public class Main {
 
 //        zoo1.getPrintAnimals();
 
+//        for (Animal animal : zoo1.getAnimals()) {
+//            animal.Sound();
+//        }
+//
+//        for (Animal animal : zoo1.getAnimals()) {
+//            animal.Play();
+//        }
+
+        Lion king = new Lion("Золотистый", 25, "мясо", "Король", 11);
+        Lion julion = new Lion("Золотистый", 25, "мясо", "Джулиан", 6);
+        Lion simba = new Lion("Коричневый", 25, "фарш", "Симба", 2);
+        zoo1.addAnimals(king);
+        zoo1.addAnimals(julion);
+        zoo1.addAnimals(simba);
+
+        System.out.println(king.toString());
+        System.out.println(julion.toString());
+
         for (Animal animal : zoo1.getAnimals()) {
             animal.Sound();
         }
@@ -59,11 +71,9 @@ public class Main {
         for (Animal animal : zoo1.getAnimals()) {
             animal.Play();
         }
-        Lion king = new Lion("Король", 11);
-        Lion julion = new Lion("Король", 11);
-        zoo1.addAnimals(king);
-        zoo1.addAnimals(julion);
 
+        zoo1.setId();
 
+        zoo1.getPrintAnimals();
     }
 }
