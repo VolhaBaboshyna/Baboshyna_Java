@@ -21,17 +21,16 @@ public class Zoo {
         System.out.println("Животные в зоопарке:");
         for (Animal animal : animals) {
             if (animal == null) {
-                continue;
             } else {
                 System.out.println(animal.toString());
             }
         }
     }
 
-    public void getPrintAnimals(Animal animal) {
-        System.out.println(animal);
-
-    }
+//    public void getPrintAnimals(Animal animal) {
+//        System.out.println(animal);
+//
+//    }
 
     public Animal[] getAnimals() {
         return animals;
