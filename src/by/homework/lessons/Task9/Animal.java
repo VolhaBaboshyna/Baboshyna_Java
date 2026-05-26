@@ -15,6 +15,10 @@ public class Animal {
     }
 
 
+    public void Sound() {
+
+    }
+
     public void Sound(String animal) {
         String result = animal + " поет";
         System.out.println(result);
@@ -23,6 +27,9 @@ public class Animal {
     public void Play(String animal) {
         String result = animal + " играет";
         System.out.println(result);
+    }
+
+    public void Play() {
     }
 
     public String toString() {

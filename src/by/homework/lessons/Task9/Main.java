@@ -50,11 +50,20 @@ public class Main {
         zoo1.addAnimals(alice);
         zoo1.addAnimals(max);
 
-        zoo1.getAnimals();
+//        zoo1.getPrintAnimals();
 
         for (Animal animal : zoo1.getAnimals()) {
             animal.Sound();
         }
+
+        for (Animal animal : zoo1.getAnimals()) {
+            animal.Play();
+        }
+        Lion king = new Lion("Король", 11);
+        Lion julion = new Lion("Король", 11);
+        zoo1.addAnimals(king);
+        zoo1.addAnimals(julion);
+
 
     }
 }

@@ -17,11 +17,15 @@ public class Zoo {
         animals = newAnimals;
     }
 
-    public void getAnimals() {
+    public void getPrintAnimals() {
         System.out.println("Животные в зоопарке:");
         for (Animal animal : animals) {
             System.out.println(animal);
         }
+    }
+
+    public Animal[] getAnimals() {
+        return animals;
     }
 
 }

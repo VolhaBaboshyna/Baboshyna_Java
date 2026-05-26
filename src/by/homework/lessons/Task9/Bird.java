@@ -23,9 +23,25 @@ public class Bird extends Animal {
         System.out.println(result);
     }
 
+    public void Singing() {
+        String result = family + " поют";
+        System.out.println(result);
+    }
+
     public void Sound(String animal) {
         String result = animal + " щебечет";
         System.out.println(result);
+    }
+
+    public void Sound() {
+        String result = family + " щебечут";
+        System.out.println(result);
+    }
+
+    public void Play() {
+        String result = family + " собирают камни";
+        System.out.println(result);
+
     }
 
     public void Play(String animal) {

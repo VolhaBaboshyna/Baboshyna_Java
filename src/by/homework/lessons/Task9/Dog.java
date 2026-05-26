@@ -40,13 +40,13 @@ public class Dog extends Animal {
         System.out.println(result);
     }
 
-    public void Sound(String animal) {
-        String result = animal + " лает";
+    public void Sound() {
+        String result = name + " лает";
         System.out.println(result);
     }
 
-    public void Play(String animal) {
-        String result = animal + " играет с палкой";
+    public void Play() {
+        String result = name + " играет с палкой";
         System.out.println(result);
 
     }
