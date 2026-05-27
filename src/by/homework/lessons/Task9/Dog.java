@@ -20,6 +20,30 @@ public class Dog extends Animal {
         super();
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public double getAverageWeight() {
+        return averageWeight;
+    }
+
+    public void setAverageWeight(double averageWeight) {
+        this.averageWeight = averageWeight;
+    }
+
+    public String getBreed() {
+        return breed;
+    }
+
+    public void setBreed(String breed) {
+        this.breed = breed;
+    }
+
     public void Bark(String name) {
         String result = name + " лает";
         System.out.println(result);
@@ -58,4 +82,19 @@ public class Dog extends Animal {
     }
 
 
+    public boolean equals(Object obj) {
+        if (!(obj instanceof Dog)) {
+            return false;
+        }
+        Dog dog = (Dog) obj;
+        if (name.equals(dog.getName()) && breed.equals(dog.getBreed()) && averageWeight == dog.getAverageWeight()) {
+            return true;
+        }
+        return false;
+    }
+
+    public int hashCode() {
+        int result = name.hashCode() + breed.hashCode() + (int) averageWeight*100;
+        return result;
+    }
 }

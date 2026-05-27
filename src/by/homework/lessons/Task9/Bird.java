@@ -18,6 +18,22 @@ public class Bird extends Animal {
         super();
     }
 
+    public String getFamily() {
+        return family;
+    }
+
+    public void setFamily(String family) {
+        this.family = family;
+    }
+
+    public String getMaximumFlightAltitude() {
+        return maximumFlightAltitude;
+    }
+
+    public void setMaximumFlightAltitude(String maximumFlightAltitude) {
+        this.maximumFlightAltitude = maximumFlightAltitude;
+    }
+
     public void Singing(String bird) {
         String result = bird + " поет";
         System.out.println(result);
@@ -51,8 +67,24 @@ public class Bird extends Animal {
     }
 
     public String toString() {
-        String result = "Птица. Id: " + id +  ", Цвет: " + color + ", Максимальная продолжительность жизни: " + maximumLifespan + ", Тип еды: " + foodType +
+        String result = "Птица. Id: " + id + ", Цвет: " + color + ", Максимальная продолжительность жизни: " + maximumLifespan + ", Тип еды: " + foodType +
                 ", Семейство: " + family + ", Максимальная высота полёта: " + maximumFlightAltitude;
+        return result;
+    }
+
+    public boolean equals(Object obj) {
+        if (!(obj instanceof Bird)) {
+            return false;
+        }
+        Bird bird = (Bird) obj;
+        if (family.equals(bird.getFamily()) && maximumFlightAltitude.equals(bird.getMaximumFlightAltitude())) {
+            return true;
+        }
+        return false;
+    }
+
+    public int hashCode() {
+        int result = family.hashCode() + maximumFlightAltitude.hashCode();
         return result;
     }
 

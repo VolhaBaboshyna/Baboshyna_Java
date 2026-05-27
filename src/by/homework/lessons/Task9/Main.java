@@ -80,5 +80,11 @@ public class Main {
         zoo1.deleteAnimal(3);
 
         zoo1.getPrintAnimals();
+
+        System.out.println(bobby.equals(alice));
+        System.out.println(bobby.hashCode());
+
+        System.out.println(eagle.equals(sparrow));
+        System.out.println(eagle.hashCode());
     }
 }
