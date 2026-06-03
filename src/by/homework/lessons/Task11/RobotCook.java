@@ -2,10 +2,10 @@ package by.homework.lessons.Task11;
 
 public class RobotCook implements Robot {
     private String model;
-    public int powerConsumption;
-    public String countryOfManufacture;
-    public String cookingUnit;
-    public boolean isOn;
+    private int powerConsumption;
+    private String countryOfManufacture;
+    private String cookingUnit;
+    private boolean isOn;
 
 
     public RobotCook(String model, int powerConsumption, String countryOfManufacture, String cookingUnit, boolean isOn) {

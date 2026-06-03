@@ -3,11 +3,11 @@ package by.homework.lessons.Task11;
 public class RobotBuilder implements Robot, RobotEngineer {
 
     private String model;
-    public int powerConsumption;
-    public String countryOfManufacture;
-    public String buildingUnit;
-    public String material;
-    public boolean isOn;
+    private int powerConsumption;
+    private String countryOfManufacture;
+    private String buildingUnit;
+    private String material;
+    private boolean isOn;
 
 
     public RobotBuilder(String model, int powerConsumption, String countryOfManufacture, String buildingUnit, String material,

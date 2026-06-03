@@ -1,10 +1,10 @@
 package by.homework.lessons.Task11;
 
 public class RobotSapper implements Robot, RobotEngineer {
-    public int powerConsumption;
-    public int mineClearingAgent;
-    public String material;
-    public boolean isOn;
+    private int powerConsumption;
+    private int mineClearingAgent;
+    private String material;
+    private boolean isOn;
     private String model;
 
     public RobotSapper(String model, int powerConsumption, int mineClearingAgent, String material, boolean isOn) {
