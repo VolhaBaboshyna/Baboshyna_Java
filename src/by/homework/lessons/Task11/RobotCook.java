@@ -82,7 +82,7 @@ public class RobotCook implements Robot {
 
     @Override
     public String uniquePossibility() {
-        String result = "Робот-повар готовит";
+        String result = "Робот-повар " + model + " готовит";
         return result;
     }
 

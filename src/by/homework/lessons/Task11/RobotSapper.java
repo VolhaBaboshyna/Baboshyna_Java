@@ -57,7 +57,7 @@ public class RobotSapper implements Robot, RobotEngineer {
 
     @Override
     public void repair() {
-        System.out.println("Робот‑сапёр модели " + model + " отремонтирован");
+        System.out.println("Робот‑сапёр " + model + " отремонтирован");
     }
 
     @Override
@@ -78,6 +78,7 @@ public class RobotSapper implements Robot, RobotEngineer {
         }
     }
 
+
     @Override
     public String uniquePossibility() {
         String result = "Робот-сапер  " + model + " разминирует бомбы";
@@ -91,7 +92,7 @@ public class RobotSapper implements Robot, RobotEngineer {
     }
 
     public String createItem() {
-        String result = "Робот-сапер создаёт приспособление для разминирования";
+        String result = "Робот-сапер " + model + " создаёт приспособление для разминирования";
         return result;
     }
 }

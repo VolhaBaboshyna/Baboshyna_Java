@@ -105,7 +105,7 @@ public class RobotBuilder implements Robot, RobotEngineer {
     }
 
     public String createItem() {
-        String result = "Робот-строитель создаёт бетон";
+        String result = "Робот-строитель " + model + " создаёт бетон";
         return result;
     }
 
