@@ -5,11 +5,6 @@ public class Garage<T extends Vehicle> {
     private int emissions;
     private T transport;
 
-    public Garage(String name, int emissions) {
-        this.name = name;
-        this.emissions = emissions;
-    }
-
     public Garage(T transport) {
         this.transport = transport;
     }
@@ -32,7 +27,7 @@ public class Garage<T extends Vehicle> {
 
     Boolean isEntryPermitted() {
         boolean isEntryPermitted;
-        if (getEmissions() > 100) {
+        if (transport.getEmissions() > 100) {
             isEntryPermitted = false;
         } else {
             isEntryPermitted = true;
@@ -42,10 +37,10 @@ public class Garage<T extends Vehicle> {
 
     String entryPermition(boolean isEntryPermitted) {
         String result;
-        if (isEntryPermitted == false) {
-            result = "Транспортное средство не допущено в гараж. Уровень выброса превышает норму.";
+        if (!isEntryPermitted) {
+            result = "Транспортное средство " + transport.getName() + " не допущено в гараж. Уровень выброса превышает норму.";
         } else {
-            result = "Транспортное средство допущено в гараж. Уровень выброса не превышает норму.";
+            result = "Транспортное средство " + transport.getName() + " допущено в гараж. Уровень выброса не превышает норму.";
         }
         return result;
     }
