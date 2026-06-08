@@ -9,7 +9,6 @@ public class Group {
     private List<Student> students = new ArrayList<>();
 
     public Group(int groupNumber) {
-        super();
         this.groupNumber = groupNumber;
         this.students = new ArrayList<>();
     }
