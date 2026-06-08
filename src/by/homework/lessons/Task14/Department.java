@@ -34,13 +34,20 @@ public class Department {
                 ", Палаты: " + wards;
     }
 
-    public void addWardToDepartment(Ward ward){
+    public void addWardToDepartment(Ward ward) {
         wards.add(ward);
     }
 
-    public int genderCount (){
-        int manCount=0, womanCount=0;
-        for (Ward ward:)
-        return manCount, womanCount;
+    public String genderCount() {
+        int manCount = 0, womanCount = 0;
+        for (Ward ward : wards) {
+            for (Patient patient : ward.patients)
+                if (patient.gender == Gender.MALE) {
+                    manCount++;
+                } else {
+                    womanCount++;
+                }
+        }
+        return "Мужчин в отделении: " + manCount + ", Женщин в отделении: " + womanCount;
     }
 }

@@ -3,7 +3,7 @@ package by.homework.lessons.Task14;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Ward {
+public class Ward implements Comparable<Patient> {
     private int number;
     private Gender type;
     Set<Patient> patients;
@@ -42,10 +42,31 @@ public class Ward {
         patients.add(patient);
     }
 
+    public void addPatientToWardByDiagnosis(Patient patient) {
+        for (Patient ward : patients) {
+            if (ward.getDiagnosis().equals(patient.getDiagnosis())) {
+                patients.add(patient);
+            } else {
+                System.out.println("У пациента отличный диагноз, выберите другую палату");
+                return;
+            }
+        }
+    }
+
     @Override
     public String toString() {
         return "Палата номер: " + number +
                 ", Тип: " + type.getGender() +
                 ", Пациенты: " + patients;
     }
+
+//    @Override
+//    public int compareTo(Patient other) {
+//        int q = 0;
+//        for (Patient ward : patients) {
+//            q = Integer.compare(ward.getUniqueIdentifier(), other.getUniqueIdentifier());
+//        }
+//        return q;
+//    }
 }
+
