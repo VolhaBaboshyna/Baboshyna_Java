@@ -44,7 +44,7 @@ public class Main {
         department3.addWardToDepartment(ward3);
         department3.addWardToDepartment(ward4);
 
-//        System.out.println(department3.genderCount());
+
         System.out.println(department3.genderCount());
 
 

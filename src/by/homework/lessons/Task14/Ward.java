@@ -3,7 +3,7 @@ package by.homework.lessons.Task14;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Ward implements Comparable<Patient> {
+public class Ward{
     private int number;
     private Gender type;
     Set<Patient> patients;
