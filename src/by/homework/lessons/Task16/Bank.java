@@ -6,9 +6,8 @@ public class Bank extends Account {
 
     Set<Account> accounts;
 
-    public Bank(int id, String accountNumber, String currency, double sum, Set<Account> accounts) {
-        super(id, accountNumber, currency, sum);
-        this.accounts = accounts;
+    public Bank(Account account) {
+
     }
 
     public void transferMoney(String accountNumberFrom, String accountNumberTo, Double amount) {
@@ -21,8 +20,9 @@ public class Bank extends Account {
                 double newSumTo = account.getSum() - amount;
                 account.setSum(newSumTo);
             }
-            try
         }
     }
+
+
 
 }
