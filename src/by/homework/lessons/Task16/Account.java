@@ -16,9 +16,13 @@ public class Account {
         this.sum = sum;
     }
 
+    public Account() {
+    }
+
     public int getId() {
         return id;
     }
+
 
     public void setId(int id) {
         this.id = id;
@@ -44,7 +48,7 @@ public class Account {
         return sum;
     }
 
-    public void setSum(double newSumFrom) {
+    public void setSum(double sum) {
         this.sum = sum;
     }
 
@@ -58,5 +62,14 @@ public class Account {
     @Override
     public int hashCode() {
         return Objects.hash(id, accountNumber);
+    }
+
+    @Override
+    public String toString() {
+        return "id: " + id + ", Номер счета: " + accountNumber + ", Валюта счета: " + currency + " , Сумма на счету: " + sum;
+    }
+
+    public int findId(String accountNumber) {
+        return id;
     }
 }
