@@ -29,14 +29,12 @@ public class Serialize implements Serializable {
         File file = new File("D:/Оля/java/Task17.txt");
         try (FileWriter fileWriter = new FileWriter(file)) {
             fileWriter.write(text);
-        } catch (IIOException e) {
-            throw new RuntimeException(e);
         } catch (IOException e) {
             throw new RuntimeException("Не найден файл");
         }
     }
 
-    private static String readTextFromFile (String path) {
+    private static String readTextFromFile(String path) {
         try (FileReader fileReader = new FileReader(path)) {
             BufferedReader bufferedReader = new BufferedReader(fileReader);
             String txt = bufferedReader.readLine();
