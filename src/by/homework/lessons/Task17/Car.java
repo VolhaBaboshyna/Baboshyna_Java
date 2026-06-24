@@ -1,6 +1,6 @@
 package by.homework.lessons.Task17;
 
-import java.io.Serializable;
+import java.io.*;
 import java.util.Objects;
 
 public class Car implements Serializable {
@@ -52,5 +52,23 @@ public class Car implements Serializable {
 
     public String toString() {
         return "Марка: " + this.mark + " , Максимальная скорость: " + this.maxSpeed + ", Страна производитель: " + this.countryProduction;
+    }
+
+    public static void serialize(Car car, File file) {
+        try (ObjectOutputStream objectOutputStream = new ObjectOutputStream(new FileOutputStream(file))) {
+            objectOutputStream.writeObject(car);
+        } catch (Exception e) {
+            throw new RuntimeException("Error");
+        }
+    }
+
+    public static Car deserialize(String file) {
+        try (ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream(file))) {
+            Car carResult = (Car) objectInputStream.readObject();
+            return carResult;
+        } catch (Exception e) {
+            throw new RuntimeException("Error");
+        }
+
     }
 }
